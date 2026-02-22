@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    android:padding="@dimen/screen_padding">
+
+    <!-- Header -->
+    <ImageView
+        android:id="@+id/iconBack"
+        android:layout_width="@dimen/icon_medium"
+        android:layout_height="@dimen/icon_medium"
+        android:src="@drawable/ic_arrow_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Back" />
+
+    <ImageView
+        android:id="@+id/iconMenu"
+        android:layout_width="@dimen/icon_medium"
+        android:layout_height="@dimen/icon_medium"
+        android:src="@drawable/ic_menu_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Menu" />
+
+    <!-- Card Number -->
+    <TextView
+        android:id="@+id/textCardNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xxl"
+        android:text="@string/card_number_full"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/text_md"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconBack" />
+
+    <!-- Divider Line -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:background="@color/text_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCardNumber" />
+
+    <!-- Expiry and CVV Row -->
+    <TextView
+        android:id="@+id/textExpiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:text="@string/card_expiry"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/text_md"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/textCvv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:text="@string/card_cvv"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/text_md"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <!-- Circular Progress with Balance -->
+    <FrameLayout
+        android:id="@+id/progressContainer"
+        android:layout_width="@dimen/circular_progress_size"
+        android:layout_height="@dimen/circular_progress_size"
+        android:layout_marginTop="@dimen/spacing_xxl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textExpiry">
+
+        <com.wallet.app.views.CircularProgressView
+            android:id="@+id/circularProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Center Content -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textCardLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shopping_card"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/text_xs"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.2" />
+
+            <TextView
+                android:id="@+id/textBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:text="@string/balance_amount"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_balance"
+                android:fontFamily="sans-serif-light" />
+
+            <TextView
+                android:id="@+id/textTotalBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:text="@string/total_balance"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/text_xs"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.2" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_lg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/navBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:text="@string/balance"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_md"
+            android:fontFamily="sans-serif" />
+
+        <View
+            android:id="@+id/underlineBalance"
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="-60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/underline_white"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/navBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xl"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:text="@string/budget"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_md"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/navExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xl"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:text="@string/expenses"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_md"
+            android:fontFamily="sans-serif" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Theme -->
+    <style name="Theme.WalletApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/orange_primary</item>
+        <item name="colorPrimaryDark">@color/orange_dark</item>
+        <item name="colorAccent">@color/orange_primary</item>
+        <item name="android:windowBackground">@color/cream</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Orange Theme (Screen 1) -->
+    <style name="Theme.WalletApp.Orange">
+        <item name="android:windowBackground">@color/orange_primary</item>
+        <item name="android:statusBarColor">@color/orange_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Dark Theme (Screen 2) -->
+    <style name="Theme.WalletApp.Dark">
+        <item name="android:windowBackground">@color/dark_gray</item>
+        <item name="android:statusBarColor">@color/dark_gray</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Light Theme (Screen 3) -->
+    <style name="Theme.WalletApp.Light">
+        <item name="android:windowBackground">@color/cream</item>
+        <item name="android:statusBarColor">@color/cream</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="TextStyle.Title">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="TextStyle.CardLabel">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">@dimen/text_sm</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="TextStyle.CardNumber">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">@dimen/text_md</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <style name="TextStyle.CardNumberLight">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">@dimen/text_md</item>
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <style name="TextStyle.Balance">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/text_balance</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyle.BalanceDark">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/text_xl</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="TextStyle.Label">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">@dimen/text_xs</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:letterSpacing">0.2</item>
+    </style>
+
+    <style name="TextStyle.LabelDark">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">@dimen/text_xs</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:letterSpacing">0.2</item>
+    </style>
+
+    <style name="TextStyle.NavItem">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_md</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyle.NavItemDark">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_md</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="TextStyle.NavItemSelected" parent="TextStyle.NavItem">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextStyle.TimeSelector">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">@dimen/text_sm</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="TextStyle.Month">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">@dimen/text_xs</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+</resources>

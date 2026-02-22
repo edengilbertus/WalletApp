@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:padding="@dimen/screen_padding">
+
+    <!-- Header -->
+    <ImageView
+        android:id="@+id/iconBack"
+        android:layout_width="@dimen/icon_medium"
+        android:layout_height="@dimen/icon_medium"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Back" />
+
+    <ImageView
+        android:id="@+id/iconMenu"
+        android:layout_width="@dimen/icon_medium"
+        android:layout_height="@dimen/icon_medium"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Menu" />
+
+    <!-- Time Period Selector -->
+    <LinearLayout
+        android:id="@+id/timePeriodSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xl"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconBack">
+
+        <LinearLayout
+            android:id="@+id/selectorMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/month"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_sm"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.1" />
+
+            <View
+                android:id="@+id/underlineMonth"
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/underline_dark"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/selectorWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xxl"
+            android:text="@string/week"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_sm"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:id="@+id/selectorDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xxl"
+            android:text="@string/day"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_sm"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1" />
+
+    </LinearLayout>
+
+    <!-- Amount Display -->
+    <TextView
+        android:id="@+id/textAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:text="@string/expenses_amount"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_xl"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timePeriodSelector" />
+
+    <!-- Step Chart -->
+    <com.wallet.app.views.StepChartView
+        android:id="@+id/stepChart"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/chart_height"
+        android:layout_marginTop="@dimen/spacing_lg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAmount" />
+
+    <!-- Month Labels -->
+    <LinearLayout
+        android:id="@+id/monthLabels"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepChart">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/feb"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_xs"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mar"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_xs"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/apr"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_xs"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/may"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_xs"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/jun"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_xs"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1" />
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_lg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/navBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:text="@string/balance"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_md"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/navBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xl"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:text="@string/budget"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_md"
+            android:fontFamily="sans-serif" />
+
+        <LinearLayout
+            android:id="@+id/navExpensesContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xl"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/navExpenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/spacing_md"
+                android:text="@string/expenses"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_md"
+                android:fontFamily="sans-serif" />
+
+            <View
+                android:id="@+id/underlineExpenses"
+                android:layout_width="70dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/underline_dark"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

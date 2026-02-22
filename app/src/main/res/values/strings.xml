@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wallet</string>
+    
+    <!-- Screen 1: Wallet Home -->
+    <string name="wallet_title">wallet</string>
+    <string name="shopping_card">SHOPPING CARD</string>
+    <string name="card_number_masked">****  ****  ****  0045</string>
+    
+    <!-- Screen 2: Card Details -->
+    <string name="card_number_full">1002  8011  0312  0000  0045</string>
+    <string name="card_expiry">04/24</string>
+    <string name="card_cvv">009</string>
+    <string name="balance_amount">$12,200</string>
+    <string name="total_balance">TOTAL BALANCE</string>
+    
+    <!-- Screen 3: Expenses -->
+    <string name="expenses_amount">$10,500</string>
+    <string name="month">MONTH</string>
+    <string name="week">WEEK</string>
+    <string name="day">DAY</string>
+    
+    <!-- Navigation -->
+    <string name="balance">balance</string>
+    <string name="budget">budget</string>
+    <string name="expenses">expenses</string>
+    
+    <!-- Months -->
+    <string name="feb">FEB</string>
+    <string name="mar">MAR</string>
+    <string name="apr">APR</string>
+    <string name="may">MAY</string>
+    <string name="jun">JUN</string>
+</resources>
