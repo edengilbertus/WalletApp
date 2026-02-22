@@ -31,6 +31,11 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
+    <!-- Base Text Style -->
+    <style name="TextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
     <!-- Text Styles -->
     <style name="TextStyle.Title">
         <item name="android:fontFamily">sans-serif-light</item>
